@@ -181,8 +181,11 @@ if __name__ == "__main__":
 
     tts = TTSSpeaker(config, alsa, audioManager)
 
-    powerPlant = PowerPlant(config)
-
+    try:
+        powerPlant = PowerPlant(config)
+    except Exception as e:
+        print("Unable to init PowerPlant", e)
+        
     startupController = StartupSequenceController(config, servoController, lightsController, tts)
 
     heartbeat = Heartbeat(config, servoController, motorController, alsa, lightsController, powerPlant)
