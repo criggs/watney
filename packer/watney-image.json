@@ -95,7 +95,7 @@
         "pip3 install aiohttp apa102-pi psutil pyalsaaudio smbus",
         "# Clone and set up Watney FIXME branch",
         "cd /home/pi",
-        "git clone -b bullseye https://github.com/criggs/watney.git",
+        "git clone -b kosmo https://github.com/criggs/watney.git",
         "cp /home/pi/watney/key.pem /home/pi",
         "cp /home/pi/watney/cert.pem /home/pi",
         "chown -R pi /home/pi/watney",
@@ -107,7 +107,7 @@
       "inline": [
         "# Turnkey",
         "cd /home/pi",
-        "git clone https://github.com/nikivanov/raspberry-pi-turnkey.git",
+        "git clone -b kosmo https://github.com/criggs/raspberry-pi-turnkey.git",
         "apt-get install -y dnsmasq hostapd python3-flask python3-requests",
         "pip3 install wpasupplicantconf",
         "cd /home/pi/raspberry-pi-turnkey",
