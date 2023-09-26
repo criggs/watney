@@ -209,48 +209,6 @@ $(document).ready(function () {
         }
     });
 
-    $("#powerButton").click(function (event) {
-        $("#shutdown-confirm").dialog({
-            resizable: false,
-            height: "auto",
-            width: "auto",
-            modal: true,
-            buttons: {
-                "Shut Down": function () {
-                    $(this).dialog("close");
-                    $.ajax({
-                        url: '/shutDown',
-                        type: "POST"
-                    });
-                },
-                Cancel: function () {
-                    $(this).dialog("close");
-                }
-            }
-        });
-    });
-
-    $("#resetButton").click(function (event) {
-        $("#restart-confirm").dialog({
-            resizable: false,
-            height: "auto",
-            width: "auto",
-            modal: true,
-            buttons: {
-                "Restart": function () {
-                    $(this).dialog("close");
-                    $.ajax({
-                        url: '/restart',
-                        type: "POST"
-                    });
-                },
-                Cancel: function () {
-                    $(this).dialog("close");
-                }
-            }
-        });
-    });
-
     $("#infoButton").click(function (event) {
         if ($("#info").is(":visible")) {
             $("#info").fadeOut(200);
